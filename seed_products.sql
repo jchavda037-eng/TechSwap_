@@ -1,0 +1,27 @@
+INSERT INTO products (id, name, brand, category, price, originalPrice, condition_text, location, featured, createdAt, shipping) VALUES
+('p1','iPhone 14 Pro','Apple','Phones',749.00,832.00,'Like New','USA',1,1713210000001,'Delivery'),
+('p2','Samsung Galaxy S23','Samsung','Phones',699.00,NULL,'New','UK',0,1713210000002,'Delivery Pickup'),
+('p3','MacBook Air M2','Apple','Laptops',999.00,1175.00,'Like New','Canada',1,1713210000003,'Delivery'),
+('p4','iPad Pro 12.9"','Apple','Tablets',650.00,NULL,'Used','UAE',0,1713210000004,'Pickup'),
+('p5','Sony WH-1000XM5','Sony','Accessories',280.00,NULL,'New','India',0,1713210000005,'Delivery'),
+('p6','Dell XPS 15','Dell','Laptops',850.00,1063.00,'Refurbished','USA',1,1713210000006,'Delivery Pickup'),
+('p7','PlayStation 5','Sony','Gaming',420.00,NULL,'Like New','UK',0,1713210000007,'Delivery'),
+('p8','Google Pixel 7','Google','Phones',399.00,420.00,'Open Box','USA',0,1713210000008,'Delivery Pickup'),
+('p9','Surface Pro 9','Microsoft','Tablets',1099.00,NULL,'New','Canada',1,1713210000009,'Delivery'),
+('p10','Nintendo Switch OLED','Nintendo','Gaming',280.00,NULL,'Used','Australia',0,1713210000010,'Pickup'),
+('p11','AirPods Pro 2nd Gen','Apple','Accessories',199.00,NULL,'New','Singapore',0,1713210000011,'Delivery'),
+('p12','ThinkPad X1 Carbon','Lenovo','Laptops',780.00,867.00,'Refurbished','USA',0,1713210000012,'Delivery Pickup'),
+('p13','Samsung Galaxy Z Fold5','Samsung','Phones',1299.00,1476.00,'Like New','USA',1,1713210000013,'Delivery'),
+('p14','Razer Blade 16','Razer','Gaming',2199.00,2390.00,'New','USA',1,1713210000014,'Delivery'),
+('p15','Sony WF-1000XM5','Sony','Accessories',219.00,NULL,'Like New','UK',0,1713210000015,'Delivery Pickup')
+ON DUPLICATE KEY UPDATE
+name = VALUES(name),
+brand = VALUES(brand),
+category = VALUES(category),
+price = VALUES(price),
+originalPrice = VALUES(originalPrice),
+condition_text = VALUES(condition_text),
+location = VALUES(location),
+featured = VALUES(featured),
+createdAt = VALUES(createdAt),
+shipping = VALUES(shipping);
